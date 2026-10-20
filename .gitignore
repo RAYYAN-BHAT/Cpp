@@ -1,0 +1,8 @@
+# Compiled binaries & objects
+*.exe
+*.o
+*.out
+
+# Editor folders
+.vscode/
+.idea/
