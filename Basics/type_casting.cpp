@@ -18,5 +18,18 @@ int main() {
     int b = static_cast<int>(c);
     cout<<b;
 
+    // Other type castings
+
+    const int x = 10;
+    int *ptr = const_cast<int*>(&x); // Removing constness
+    *ptr = 20; // Modifying the value through the non-const pointer
+    cout << "Modified value: " << x << endl;
+
+    
+    int num2 = 65;
+    char *charPtr = reinterpret_cast<char*>(&num2); // Reinterpreting the int pointer as a char pointer
+    cout << "Reinterpreted value: " << *charPtr << endl; // Output
+
+
     return 0;
 }
