@@ -6,6 +6,10 @@ class Student {
     string name;
     int roll_number;
     double marks;
+
+    public:
+    void set_data(string n, int roll_num, double m);
+    void display();
 };
 void Student::set_data(string n, int roll_num, double m) {
         name = n;
@@ -18,7 +22,6 @@ void Student::set_data(string n, int roll_num, double m) {
         cout << "Roll Number: " << roll_number << endl;
         cout << "Marks: " << marks << endl;
     }
-};
 
 int main() {
     Student student1;

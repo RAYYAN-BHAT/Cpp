@@ -1,4 +1,5 @@
-#include <iostream> 
+#include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -17,19 +18,19 @@ class Student {
         roll_number = roll_num;
         marks = m;
     }
+    void display();
     protected:
     // Protected member functions can be accessed by derived classes.
     int get_roll_number() {
         return roll_number;
     }
 };
-// Member function definitions outside the class using scope resolution operator are also public by default, unless specified otherwise.
+// The access level is determined by the declaration inside the class.
 void Student::display() {
-        cout << "Student Name: " << name << endl;
-        cout << "Roll Number: " << roll_number << endl;
-        cout << "Marks: " << marks << endl;
-    }
-};
+    cout << "Student Name: " << name << endl;
+    cout << "Roll Number: " << roll_number << endl;
+    cout << "Marks: " << marks << endl;
+}
 
 int main() {
     Student student1;
